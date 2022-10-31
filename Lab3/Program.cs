@@ -12,56 +12,61 @@ namespace Lab3
         {
             var factory = new FlyweightFactory();
 
-            var number1 = factory.GetFlyweight("228");
+            var number1 = factory.GetFlyweight("abcd");
             number1.Show();
             var number2 = factory.GetFlyweight("196");
             number2.Show();
             var number3 = factory.GetFlyweight("3682094");
             number3.Show();
         }
-        public abstract class AbstractFlyweight
-        {
-            public abstract void Show();
-        }
 
-        public class Flyweight : AbstractFlyweight
+
+        public class Flyweight
         {
             private string key;
-            private List<List<string>> numbers = new List<List<string>> {
-                new List<string>{"###", "# #", "# #", "# #", "###" },
-                new List<string>{"## ", " # ", " # ", " # ", "###" },
-                new List<string>{"###", "  #", "###", "#  ", "###" },
-                new List<string>{"###", "  #", "###", "  #", "###" },
-                new List<string>{"# #", "# #", "###", "  #", "  #" },
-                new List<string>{"###", "#  ", "###", "  #", "###" },
-                new List<string>{"###", "#  ", "###", "# #", "###" },
-                new List<string>{"###", "  #", "  #", "  #", "  #" },
-                new List<string>{"###", "# #", "###", "# #", "###" },
-                new List<string>{"###", "# #", "###", "  #", "###" }
+            private Dictionary<char, List<string>> numbers = new Dictionary<char, List<string>> {
+                ['0']= new List<string>{"###", "# #", "# #", "# #", "###" } ,
+                ['1']= new List<string>{"## ", " # ", " # ", " # ", "###" } ,
+                ['2']= new List<string>{"###", "  #", "###", "#  ", "###" } ,
+                ['3']= new List<string>{"###", "  #", "###", "  #", "###" } ,
+                ['4']= new List<string>{"# #", "# #", "###", "  #", "  #" } ,
+                ['5']= new List<string>{"###", "#  ", "###", "  #", "###" } ,
+                ['6']= new List<string>{"###", "#  ", "###", "# #", "###" } ,
+                ['7']= new List<string>{"###", "  #", "  #", "  #", "  #" } ,
+                ['8']= new List<string>{"###", "# #", "###", "# #", "###" } ,
+                ['9']= new List<string>{"###", "# #", "###", "  #", "###" } ,
+                ['a']= new List<string>{" # ", "# #", "###", "# #", "# #" } ,
+                ['b']= new List<string>{"## ", "# #", "## ", "# #", "## " } ,
+                ['c']= new List<string>{" ##", "#  ", "#  ", "#  ", " ##" } ,
+                ['d']= new List<string>{"## ", "# #", "# #", "# #", "## " } ,
             };
 
             public Flyweight(string key)
             {
                 this.key = key;
             }
-            public override void Show()
+            public void Show()
             {
-                List<int> array = new List<int> { };
+                List<char> array = new List<char> { };
                 for (int i = 0; i < key.Length; i++)
                 {
-                    array.Add(Convert.ToInt32(Char.GetNumericValue(key[i])));
+                    array.Add(key[i]);
                 }
 
-
-                for (int j = 0; j < numbers[0].Count; j++)
+                for(int j = 0; j < 5; j++)
                 {
                     for (int i = 0; i < array.Count(); i++)
                     {
-                        Console.Write($"{numbers[array[i]][j]}");
-                        Console.Write(" ");
+                        foreach (var item in numbers)
+                        {
+                            if (item.Key == array[i])
+                            {
+                                Console.Write($"{item.Value[j]}");
+                                Console.Write(" ");
+                            }
+                        }
                     }
                     Console.WriteLine("");
-
                 }
                 Console.WriteLine("");
             }
