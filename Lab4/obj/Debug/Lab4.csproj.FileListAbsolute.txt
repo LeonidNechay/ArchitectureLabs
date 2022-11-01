@@ -1,0 +1,8 @@
+D:\ArchitectureLabs\Lab4\bin\Debug\Lab4.exe.config
+D:\ArchitectureLabs\Lab4\bin\Debug\Lab4.exe
+D:\ArchitectureLabs\Lab4\bin\Debug\Lab4.pdb
+D:\ArchitectureLabs\Lab4\obj\Debug\Lab4.csproj.AssemblyReference.cache
+D:\ArchitectureLabs\Lab4\obj\Debug\Lab4.csproj.SuggestedBindingRedirects.cache
+D:\ArchitectureLabs\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+D:\ArchitectureLabs\Lab4\obj\Debug\Lab4.exe
+D:\ArchitectureLabs\Lab4\obj\Debug\Lab4.pdb
