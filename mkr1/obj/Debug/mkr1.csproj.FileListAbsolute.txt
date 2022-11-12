@@ -1,0 +1,8 @@
+D:\ArchitectureLabs\mkr1\bin\Debug\mkr1.exe.config
+D:\ArchitectureLabs\mkr1\bin\Debug\mkr1.exe
+D:\ArchitectureLabs\mkr1\bin\Debug\mkr1.pdb
+D:\ArchitectureLabs\mkr1\obj\Debug\mkr1.csproj.AssemblyReference.cache
+D:\ArchitectureLabs\mkr1\obj\Debug\mkr1.csproj.SuggestedBindingRedirects.cache
+D:\ArchitectureLabs\mkr1\obj\Debug\mkr1.csproj.CoreCompileInputs.cache
+D:\ArchitectureLabs\mkr1\obj\Debug\mkr1.exe
+D:\ArchitectureLabs\mkr1\obj\Debug\mkr1.pdb
